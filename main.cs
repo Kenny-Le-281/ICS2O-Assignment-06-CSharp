@@ -26,7 +26,6 @@ class Program
         JsonNode characterNode = resultNode!["character"]!;
         // Console.WriteLine(weatherNode);
         JsonNode quoteNode = resultNode!["quote"]!;
-        
         Console.WriteLine("Anime name: " + animeNode);
         Console.WriteLine("");
         Console.WriteLine("Character name: " + characterNode);
