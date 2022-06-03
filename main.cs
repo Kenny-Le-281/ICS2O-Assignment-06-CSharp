@@ -10,7 +10,6 @@ class Program
 {
     public static async Task Main()
     {
-
         HttpClient client = new HttpClient();
         string response = await client.GetStringAsync(
             "https://animechan.vercel.app/api/random"
@@ -20,11 +19,11 @@ class Program
         // Console.WriteLine(jsonAsDictionary);
         Console.WriteLine("");
         JsonNode resultNode = JsonNode.Parse(response)!;
-        // Console.WriteLine(forecastNode);
+        // Console.WriteLine(animeNode);
         JsonNode animeNode = resultNode!["anime"]!;
-        // Console.WriteLine(weatherNode);
+        // Console.WriteLine(characterNode);
         JsonNode characterNode = resultNode!["character"]!;
-        // Console.WriteLine(weatherNode);
+        // Console.WriteLine(quoteNode);
         JsonNode quoteNode = resultNode!["quote"]!;
         Console.WriteLine("Anime name: " + animeNode);
         Console.WriteLine("");
